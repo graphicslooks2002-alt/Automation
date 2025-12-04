@@ -1,0 +1,48 @@
+classDiagram
+direction RL
+    class Candidate {
+	    +string purpose
+	    -string login
+	    -String signup
+	    -outlook()
+	    -Email()
+    }
+
+    class General_Info {
+	    -string First Name
+	    -string Last Name
+	    -date DOB
+	    -string Country
+	    app()
+    }
+
+    class Information_Collection {
+	    -Address section
+	    -Interview Detail section
+	    -Availabliltiy Section
+	    -Skills Section
+	    -Job list section
+	    -Preferences and Exclusion section
+	    -Documents Management Section
+	    -Work Reference Section
+	    -Resum Reveiew and Verification section
+	    -Payslip section
+	    -Referral section
+	    -Communication History section
+	    -Audit Trail section
+	    - properties Section
+	    -work Reference verification section
+	    -custom Exit
+	    app()
+    }
+
+    class Appendix {
+	    Associated_Documents
+	    Competency Requirements
+	    Revision history
+	    app()
+    }
+
+    Candidate --<| General_Info
+    General_Info --<| Information_Collection
+    Information_Collection -- <|Appendix
